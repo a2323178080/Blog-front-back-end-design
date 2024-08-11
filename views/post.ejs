@@ -1,0 +1,37 @@
+<% extend('./layouts/layout') %>
+
+    <div class="hex-blog">
+        <nav class="breadcrumb pl-0">
+            <a class="breadcrumb-item text-primary" href="/">Home</a>
+            <a class="breadcrumb-item text-primary" href="#">
+                分類
+            </a>
+            <span class="breadcrumb-item active">文章標題</span>
+        </nav>
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <!-- artical header -->
+                <h1 class="text-primary"><%- article.title%></h1>
+                <div class="d-flex flex-row text-secondary small">
+                    <div class="p-2"><i class="fa fa-user-o" aria-hidden="true"></i> 作者</div>
+                    <div class="p-2">
+                        <%= moment((article.update_time)*1000).format('YYYY/MM/DD'); %>
+                    </div>
+                    <div class="p-2"><i class="fa fa-tag" aria-hidden="true"></i>
+                        <a href="" class="text-info">
+                            <%- categories[article.category]?.name %>
+                        </a>
+                    </div>
+                </div>
+                <article class="text-dark post mb-4">
+                    <p><%- article.content%></p>
+                </article>
+                <!-- 留言 -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p>寫留言的地方</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

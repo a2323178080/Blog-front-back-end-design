@@ -1,0 +1,49 @@
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  outline: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  padding: 0;
+}
+
+html,body{
+  width:100%;
+  height:100vh;
+}
+
+
+#root{
+  width:100%;
+  height:100%;
+
+}
+
+*,*:after,*:before{
+  box-sizing:border-box;
+}
+
+.page-container{
+  position: relative;
+  min-height: 100vh;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
